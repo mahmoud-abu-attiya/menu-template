@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
   text-transform: capitalize;
 }
 .bt{
-  padding: 7px 10px;
+  padding: 5px 8px;
   width: fit-content;
   border: 2px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
@@ -195,39 +195,48 @@ main{
   border-radius: 1rem;
   overflow: hidden;
 }
-.collapse .card{
+.accordion-collapse .card{
   background-image: linear-gradient(20deg, rgba(var(--primary-color), 1), rgba(var(--secondary-color), 1));
+  color: var(--light-color);
 }
-.collapse .card .col-4{
+.accordion-collapse .card .col-4{
   position: relative;
 }
 .accordion-collapse{
   border: 1px solid rgba(0, 0, 0, 0.5);
+  max-height: 400px;
+  /* background-image: linear-gradient(20deg, rgba(var(--primary-color), 1), rgba(var(--secondary-color), 1)); */
+  max-height: 400px;
+  overflow-y: scroll;
 }
-.collapse .card img{
+.accordion-collapse .card img{
   height: 100%;
   width: auto;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  object-fit: cover;
 }
-.collapse .card .card-text{
+.accordion-collapse .card .card-text{
   line-height: 1rem;
-}
-.collapse .accordion-body{
-  max-height: 400px;
-  overflow-y: scroll;
 }
 .accordion .accordion-button:focus {
   box-shadow: none;
 }
+.accordion-body{
+  padding: 10px 5px !important;
+  background-color: rgba(var(--primary-color), 0.2);
+}
 .accordion .accordion-button {
+  /* background-color:rgba(var(--secondary-color), 1); */
   background-image: linear-gradient(20deg, rgba(var(--primary-color), 1), rgba(var(--secondary-color), 1));
+  color: var(--light-color);
 }
 .accordion .accordion-button:not(.collapsed) {
-  color: inherit;
   background-image: linear-gradient(20deg, rgba(var(--primary-color), 1), rgba(var(--secondary-color), 1));
+  /* background-color:rgba(var(--secondary-color), 1); */
+  color: var(--light-color);
   box-shadow: none;
 }
 /*//////////////////////////// accordion */
@@ -237,7 +246,10 @@ main{
   color: var(--light-color);
   background-image: linear-gradient(20deg, rgba(var(--secondary-color), 1), rgba(var(--primary-color) , 1) 50%);
 }
-.menu .card .bt{
+.bt-price{
+  background-color: green;
+}
+.bt-price:hover{
   background-color: green;
 }
 footer{
